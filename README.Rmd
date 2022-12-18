@@ -9,3 +9,10 @@ This repository aims to describe and document the schemas within the MCCA databa
 
 1. MSSQL Database
 2. Shiny App
+
+## Tables
+
+### Membership Details
+
+### Tournament Sign-In Registration
+
