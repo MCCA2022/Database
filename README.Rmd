@@ -1,0 +1,6 @@
+---
+title: "MCCA Database"
+output: github_document
+---
+
+This repository aims to describe and document the schemas within the MCCA databases.
