@@ -4,3 +4,8 @@
 .Ruserdata
 
 *.Rproj
+renv/
+renv.lock
+.Rprofile
+.Renviron
+README.Rmd
