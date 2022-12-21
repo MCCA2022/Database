@@ -9,3 +9,7 @@ renv.lock
 .Rprofile
 .Renviron
 README.Rmd
+
+ddl/query.sql
+install.sh
+Dockerfile
