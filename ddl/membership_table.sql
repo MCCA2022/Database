@@ -5,6 +5,7 @@ IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='membership' and xtype='U')
   BEGIN
     CREATE TABLE membership (
       id INT NOT NULL PRIMARY KEY IDENTITY (1, 1),
+      application_datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       email VARCHAR(100) NOT NULL,
       first_name VARCHAR(100) NOT NULL,
       middle_name VARCHAR(100) NOT NULL,
@@ -21,6 +22,6 @@ IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='membership' and xtype='U')
       lichess_username VARCHAR(100) NOT NULL,
       reason_and_goals_with_chess VARCHAR,
       RA10173 CHARACTER(100) NOT NULL,
-      application_datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+      approved CHARACTER(100) NOT NULL 
     )
   END
