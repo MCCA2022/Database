@@ -1,0 +1,105 @@
+---
+title: "MCCA Membership Form"
+output: 
+    flexdashboard::flex_dashboard:
+      vertical_layout: fill
+runtime: shiny
+css: ["www/styles.css"]
+---
+
+```{r global, include=FALSE}
+
+```
+
+# Personal  {data-navmenu="Membership" data-orientation=columns}
+
+## Sidebar {.sidebar}
+
+```{r eval=FALSE}
+actionLink("button", "An action link")
+```
+
+````{r eval=FALSE}
+actionButton("button", "An action button")
+````
+
+### Go to Next Page
+
+```{r}
+shiny::actionButton(
+  inputId = "clickMe",
+  label = "Next",
+  class = "btn btn-lg btn-primary",
+  onclick = "location.href='#section-experience';",
+  width = '92%',
+  style="position:absolute; bottom: 5px;"
+)
+```
+
+## Column {data-width=500}
+
+```{r}
+textInput(inputId = "first", label = h3("First"), width = '80%')
+textInput(inputId = "middle", label = h3("Middle"), width = '80%')
+textInput(inputId = "last", label = h3("Last"), width = '80%')
+shiny::dateInput(
+  inputId = "dob", 
+  label = h3("Birthdate"),
+  value="",
+  startview = "decade", 
+  max = Sys.Date(),
+  width = '80%',
+)
+textInput(inputId = "cel", label = h3("Cellphone"), width = '80%', placeholder = "917-123-456")
+```
+
+## Column {data-width=500}
+
+```{r}
+shiny::textInput(inputId = "email", label = h3("E-mail"), width = '80%', placeholder = "juan@delacruz.com")
+shiny::textInput(inputId = "bgy", label = h3("Barangay"), width = '80%', placeholder = "Poblacion")
+shiny::textInput(inputId = "mun", label = h3("City/Municipality"), width = '80%', placeholder = "Mabalacat")
+shiny::textInput(inputId = "prv", label = h3("Province"), width = '80%', placeholder = "Pampanga")
+shiny::textInput(inputId = "reg", label = h3("Region"), width = '80%', placeholder = "Region III (Central Luzon)")
+```
+
+# Experience  {data-navmenu="Membership" data-orientation=rows}
+
+## Sidebar {.sidebar}
+
+### Request for Approval
+
+```{r}
+shiny::actionButton(
+  inputId = "submit",
+  label = "Submit Application",
+  class = "btn btn-lg btn-primary",
+  onclick="location.href='#section-page2';",
+  width = '92%',
+  style="position:absolute; bottom: 5px;"
+)
+```
+
+## Row {data-height=50}
+
+```{r}
+shiny::textInput(inputId = "ncfp", label = h3("NCFP ID"), width = '80%')
+```
+
+## Row {data-height=50}
+
+```{r}
+shiny::textInput(inputId = "fide", label = h3("FIDE ID"), width = '80%')
+```
+
+## Row {data-height=50}
+
+```{r}
+shiny::textInput(inputId = "lichess", label = h3("Lichess Username"), width = '80%')
+```
+
+## Row {data-height=800}
+
+```{r}
+shiny::textAreaInput(inputId = "goal", label = h3("Goals"), width = '80%', height = '60%')
+```

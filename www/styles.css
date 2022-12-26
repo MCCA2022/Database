@@ -1,0 +1,8 @@
+#sidebarItemExpanded > ul > :last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+}
+
+background-color: #ec7063 ; border-radius: 10px !important; border: none; position:absolute; bottom: 5px;
